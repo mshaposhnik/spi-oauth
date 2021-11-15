@@ -11,8 +11,8 @@ import (
 )
 
 var gitHubConf = &oauth2.Config{
-	ClientID:     "4f28072deaec352b14b9",
-	ClientSecret: "367a31abe2812713aca28ef19abb92a0ea1d6c1e",
+	ClientID:     "<edited>",
+	ClientSecret: "<edited>",
 	RedirectURL:  "http://localhost:8000/github/callback",
 	Endpoint: github.Endpoint,
 }

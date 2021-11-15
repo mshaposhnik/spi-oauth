@@ -17,8 +17,8 @@ var quayEndpoint = oauth2.Endpoint{
 
 
 var quayConf = &oauth2.Config{
-	ClientID:     "LXXK8GCKIRMVBM5PAHVC",
-	ClientSecret: "9LEUOPN2GFXCADYUO0LP0089M573VUD9DCUXHOJA",
+	ClientID:     "<edited>",
+	ClientSecret: "<edited>",
 	RedirectURL:  "http://localhost:8000/quay/callback",
 	Endpoint: quayEndpoint,
 }
