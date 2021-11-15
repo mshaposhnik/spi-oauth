@@ -1,20 +1,24 @@
 package main
 
 import (
-	"net/http"
-	"github.com/gorilla/mux"
-	"github.com/mshaposhnik/spi-oauth/controllers"
-	"os"
 	"fmt"
+	"github.com/gorilla/mux"
+	"net/http"
+	"os"
+	"spi-oauth/controllers"
 )
-
 
 func main() {
 
 	router := mux.NewRouter()
 
-	router.HandleFunc("/authenticate", controllers.Authenticate).Methods("GET")
-	router.HandleFunc("/callback", controllers.Callback).Methods("GET")
+	router.HandleFunc("/github/authenticate", controllers.GitHubAuthenticate).Methods("GET")
+	router.HandleFunc("/github/callback", controllers.GitHubCallback).Methods("GET")
+
+
+	router.HandleFunc("/quay/authenticate", controllers.QuayAuthenticate).Methods("GET")
+	router.HandleFunc("/quay/callback", controllers.QuayCallback).Methods("GET")
+
 
 	port := os.Getenv("PORT")
 	if port == "" {
