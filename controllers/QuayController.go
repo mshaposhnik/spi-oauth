@@ -36,7 +36,7 @@ var QuayAuthenticate = func(w http.ResponseWriter, r *http.Request) {
 //	realmOption := oauth2.SetAuthURLParam("realm", "realm")
 	url := quayConf.AuthCodeURL(state)
 
-	http.Redirect(w, r, url, http.StatusTemporaryRedirect)
+	http.Redirect(w, r, url, http.StatusFound)
 }
 
 

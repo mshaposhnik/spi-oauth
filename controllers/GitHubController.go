@@ -30,7 +30,7 @@ var GitHubAuthenticate = func(w http.ResponseWriter, r *http.Request) {
 	state := r.FormValue("state")
 	url := gitHubConf.AuthCodeURL(state)
 
-	http.Redirect(w, r, url, http.StatusTemporaryRedirect)
+	http.Redirect(w, r, url, http.StatusFound)
 }
 
 

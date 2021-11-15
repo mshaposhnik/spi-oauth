@@ -9,6 +9,10 @@ import (
 )
 
 func main() {
+	start()
+}
+
+func start() {
 
 	router := mux.NewRouter()
 
