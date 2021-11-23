@@ -10,4 +10,5 @@ _test
 *.exe
 *.test
 *.prof
+*.out
 .idea/

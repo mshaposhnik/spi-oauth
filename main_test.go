@@ -22,6 +22,8 @@ import (
 	"strings"
 	"testing"
 	"time"
+	"os"
+	"fmt"
 )
 
 var client = &http.Client{
@@ -70,3 +72,4 @@ func TestQuayRedirect(t *testing.T) {
 	assert.Equal(t, http.StatusFound, resp.StatusCode)
 	assert.True(t, strings.HasPrefix(resp.Header.Get("Location"), "https://quay.io/oauth/authorize"))
 }
+
