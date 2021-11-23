@@ -23,7 +23,6 @@ import (
 	"testing"
 	"time"
 	"os"
-	"fmt"
 )
 
 var client = &http.Client{
@@ -34,6 +33,8 @@ var client = &http.Client{
 }
 
 func TestMain(m *testing.M) {
+	os.Setenv("GITHUB_CRED_PATH", "github_test.txt")
+	os.Setenv("QUAY_CRED_PATH", "quay_test.txt")
 	go start()
 	m.Run()
 }
@@ -72,4 +73,3 @@ func TestQuayRedirect(t *testing.T) {
 	assert.Equal(t, http.StatusFound, resp.StatusCode)
 	assert.True(t, strings.HasPrefix(resp.Header.Get("Location"), "https://quay.io/oauth/authorize"))
 }
-
