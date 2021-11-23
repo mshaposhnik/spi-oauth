@@ -26,7 +26,7 @@ jobs:
       - name: Run tests
         run: |
          echo "" > coverage.txt
-         export MOCK_API=true && go test -mod=vendor -v ./... -coverprofile coverage.txt
+         export MOCK_API=true && go test  ./... -coverprofile coverage.txt
          bash <(curl -s https://codecov.io/bash)
       - name: Codecov
         uses: codecov/codecov-action@v2.1.0
