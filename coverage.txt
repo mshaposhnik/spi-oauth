@@ -1,0 +1,6 @@
+mode: set
+spi-oauth/main.go:27.13,29.2 1 0
+spi-oauth/main.go:31.14,42.16 7 1
+spi-oauth/main.go:46.2,49.16 3 1
+spi-oauth/main.go:42.16,44.3 1 1
+spi-oauth/main.go:49.16,51.3 1 0
