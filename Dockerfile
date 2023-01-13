@@ -18,7 +18,7 @@ RUN export ARCH="$(uname -m)" && if [[ ${ARCH} == "x86_64" ]]; then export ARCH=
     go test -v ./... && \
     CGO_ENABLED=0 GOOS=linux GOARCH=${ARCH} GO111MODULE=on go build -a -o spi-oauth main.go
 
-FROM registry.access.redhat.com/ubi8-minimal:8.4-212
+FROM registry.access.redhat.com/ubi8-minimal:8.7-1049
 
 COPY --from=builder /spi-oauth/spi-oauth /spi-oauth
 
